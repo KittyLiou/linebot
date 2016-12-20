@@ -31,7 +31,7 @@ def callback(request):
                 if isinstance(event.message, TextMessage):
                     line_bot_api.reply_message(
                         event.reply_token,
-                        TextSendMessage(text=event.message.text)
+                        TextSendMessage(text='測試中，請稍後')
                     )
 
         return HttpResponse()
