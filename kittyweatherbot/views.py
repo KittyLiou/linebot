@@ -33,11 +33,6 @@ def callback(request):
                         event.reply_token,
                         TextSendMessage(text=event.message.text)
                     )
-					if 'abc' in 'abcdfeee':
-					    line_bot_api.reply_message(
-							event.reply_token,
-							TextSendMessage(text='你是想問天氣嗎?')
-						)
 
         return HttpResponse()
     else:
