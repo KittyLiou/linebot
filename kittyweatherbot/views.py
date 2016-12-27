@@ -33,8 +33,8 @@ def callback(request):
             if isinstance(event, MessageEvent):
                 if isinstance(event.message, TextMessage):
                     if '天氣' in event.message.text:
-						pos = event.message.text.find('天氣')
-						location = event.message.text[pos-3:pos]
+                        pos = event.message.text.find('天氣')
+                        location = event.message.text[pos-3:pos]
                         req = urllib.request.Request('http://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey=CWB-8C4DB566-AD62-4E69-91D8-6E7323B5F20A')
                         resp = urllib.request.urlopen(req)
                         content = resp.read()
